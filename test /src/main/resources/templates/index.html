@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Hello World</title>
+</head>
+<body class="bg-light">
+  <div class="text-center">
+    <form method="post" th:action="@{/post}" class="form-hello" th:object="${form}">
+      <h2>HelloWorld</h2>
+      <div class="form-group">
+        <label for="userId" class="sr-only">userId</label>
+        <input type="text" class="form-control" placeholder="ユーザーID" name= "name" th:text="*{name}"/>
+      </div>
+      <input type="submit" value="　登録　" class="btn btn-primary">
+      </form>
+  </div>
+</body>
+</html>
